@@ -1,0 +1,186 @@
+﻿@model IEnumerable<eChrome.Models.Downloads>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.guid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.current_path)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.target_path)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.start_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.received_bytes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_bytes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.danger_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.interrupt_reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.end_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.opened)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.last_access_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.transient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.referrer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.site_url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tab_url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tab_referrer_url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.http_method)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.by_ext_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.by_ext_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.etag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.last_modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mime_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.original_mime_type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.guid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.target_path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.start_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.received_bytes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_bytes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.danger_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.interrupt_reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.end_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.opened)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last_access_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.referrer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.site_url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tab_url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tab_referrer_url)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.http_method)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.by_ext_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.by_ext_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.etag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last_modified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mime_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.original_mime_type)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
